@@ -21,7 +21,7 @@ You have three options to run these notebooks:
 
 -->
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcodelmastro/ESIPAP-2021/master?filepath=index.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcodelmastro/ESIPAP-2021/main)
 
 <!--
 **Go to the [Tutorials](Tutorials) directory and execute the [example notebook](Tutorials/TestSetup.ipynb) there to verify your setup!**
