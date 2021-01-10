@@ -1,7 +1,7 @@
 FROM rootproject/root:latest
 
 RUN apt update
-RUN apt -y install python3-pip root
+RUN apt -y install python3-pip
 RUN python3 -m pip install --upgrade pip setuptools wheel
 
 # After October 2020 errors can happen when installing or updating packages. Pip will change the way that it resolves dependency conflicts.
