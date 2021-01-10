@@ -4,7 +4,7 @@
 
 The slides of the lectures will appear in [this directory](Slides) as the course proceeds. 
 
-Since this year the course will be held remotely becouse  the pandemics, the PDF of the next lecture will be made available *before* the lecture itself to allow you to better follow.
+Since this year the course will be held remotely because  the pandemics, the PDF of the next lecture will be made available *before* the lecture itself to allow you to better follow.
 
 ## Homework
 
