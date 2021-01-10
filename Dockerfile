@@ -1,16 +1,13 @@
+# Build main enviroment
 FROM rootproject/root:latest
 
 RUN apt update
 RUN apt -y install python3-pip
 RUN python3 -m pip install --upgrade pip setuptools wheel
+RUN python3 -m pip install jupyter jupyterhub metakernel zmq numpy matplotlib root-numpy uproot scipy
 
-# After October 2020 errors can happen when installing or updating packages. Pip will change the way that it resolves dependency conflicts.
-# recommend use --use-feature=2020-resolver to test your packages with the new resolver before it becomes the default.
-
-RUN python3 -m pip --use-feature=2020-resolver install jupyter scipy uproot root-numpy matplotlib recordtype lmfit pandas jupyterhub
-RUN python3 -m pip --use-feature=2020-resolver install numericalunits numba lz4 cython mpmath sympy astropy keras sklearn tables
-
-RUN apt-get update && apt-get install -yq --no-install-recommends \
+RUN apt-get update && \
+    apt-get install -yq --no-install-recommends \
     build-essential \
     locales \
     python3-dev \
@@ -20,17 +17,9 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
 
 RUN mkdir /etc/jupyterhub && jupyterhub --generate-config -f /etc/jupyterhub/jupyterhub_config.py
 
-# Install dependencies to run notebooks
-RUN pip install --upgrade pip
-RUN pip install jupyter \
-                metakernel \
-                zmq \
-		numpy \
-		matplotlib
-
 # Create a user that does not have root privileges
 ARG username=physicist
-RUN userdel builder && useradd --create-home --home-dir /home/${username} ${username}
+RUN useradd --create-home --home-dir /home/${username} ${username}
 ENV HOME /home/${username}
 
 # Copy repository in user home
