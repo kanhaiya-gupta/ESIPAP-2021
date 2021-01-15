@@ -17,13 +17,25 @@ We will use [ROOT](https://root.cern) and [Python](https://www.python.org) with 
 
 You have several options to run these notebooks:
 
-- You have a local setup version of Python3 and ROOT (with Python support enabled) installed on your computer: clone or download the repository, and run the notebooks locally.
-
-- You know how to use [Docker](https://www.docker.com): clone or download the repository, build the `docker` image and [run it](https://hub.docker.com/r/rootproject/root), run the notebooks locally.
+- You already have a local setup version of Python3 and ROOT (with Python support enabled) installed on your computer: clone or download the repository, and run the notebooks locally.
 
 - You have a CERN account, and you know how to use [SWAN](http://swan.cern.ch): clone the repository on your CERNBox area to access and run the notebooks.
 
-- If none of the above works for you, you can launch a standalone [binder](https://mybinder.org) environment using the other button below: it will give you a working setup with Python and ROOT, that will allow you to run the notebooks from the browser. Please note that in this case any change you make will be lost unless you copy them elsewhere.
+- You would like to run Python and ROOT on your computer, but you don't have them installed and you are not sure about how to properly do it. In this case, the safest option is to use [Docker](https://www.docker.com), and to use the container that already have the proper setup. Here's is a quick list of instructions:
+   * Install [Docker Desktop](https://www.docker.com/products/docker-desktop) for you OS;
+   * Once done, make sure you can run the `docker` command from a terminal;
+   * Clone or download the ESIPAP-2021 repository (this one!), `cd` to the main directory;
+   * From the command line, run the command `docker run --rm -p 8888:8888 marcodelmastro/esipap:latest`
+   * You should see on the screen a series of messages, including one with a `http` address similar to this (**the token string will be different!**):
+   
+     `http://127.0.0.1:8888/?token=5666c2fc6015b0e0310382076f31ad9df7f2afc2694090ff`
+
+   * Copy and paste the address in your browser, and you should land on a page like this one:
+   
+   ![ROOT Notebook browser](browser.png)
+
+
+- If none of the above works methods for you, you can launch a standalone [MyBinder](https://mybinder.org) environment using the other button below: it will give you a working setup with Python and ROOT, that will allow you to run the notebooks from the browser. Please note that in this case any change you make will be lost unless you copy them elsewhere.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/marcodelmastro/ESIPAP-2021/main)
 
