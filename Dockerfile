@@ -16,6 +16,8 @@ RUN python3 -m pip install \
        matplotlib \
        uproot \
        scipy \
+       particle \
+       hepunits \
      && rm -rf /var/lib/apt/lists/*
 
 # Create a user that does not have root privileges 
