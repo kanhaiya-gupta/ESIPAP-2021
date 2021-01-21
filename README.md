@@ -29,37 +29,28 @@ You have several options to run these notebooks:
 
    * Clone or download the ESIPAP-2021 repository (this one!) somewhere to your disk;
 
-   * From the command line, run the command:
-     `docker run --rm -p 8888:8888 --name ESIPAP marcodelmastro/esipap:latest`
-     This will start the ESIPAP container. 
-	 You should see on the screen a series of messages, including one with a `http` address similar to this (**the token string will be different!**):
-   
+   * From the command line, run the command:  
+     `docker run --rm -p 8888:8888 --name ESIPAP marcodelmastro/esipap:latest`  
+     This will start the ESIPAP container.
+	 You should see on the screen a series of messages, including one with a `http` address similar to this (**the token string will be different!**):__
      `http://127.0.0.1:8888/?token=5666c2fc6015b0e0310382076f31ad9df7f2afc2694090ff`
 
-   * Copy and paste the address in your browser, and you should land on a page like this one:
-   
-   ![ROOT Notebook browser](browser.png)
+   * Copy and paste the address in your browser, and you should land on a page like this one:  
+     ![ROOT Notebook browser](browser.png)
 
-   * Note that if you use the procedure described above, **every change you make to the notebook will be lost when you stop the container!**. This is because docker will serve you the notebook from the container, and you don't have the right to save them. In other to keep your changes run instead this command:
-   
-    `docker run --rm -p 8888:8888 -v <location-of-the-ESIPAP-repo>:/home/esipap/local --name ESIPAP marcodelmastro/esipap:latest`
-	 
-	 where `<location-of-the-ESIPAP-repo>` is the path to where you downloaded the ESIPAP repository. For instance, on a Unix machin is could be:
-	 
-	 `docker run --rm -p 8888:8888 -v /Users/Marco/ESIPAP-2021:/home/esipap/local --name ESIPAP marcodelmastro/esipap:latest`
-	 
-	 or, on a Windows machine, something like:
-	 
-	 `docker run --rm -p 8888:8888 -v  C:\Users\Marco\ESIPAP-2021:/home/esipap/local --name ESIPAP marcodelmastro/esipap:latest`
-	 
-	 On a Unix machine you could also `cd` to the repository and use the `pwd` command like:
-	 
-	 `docker run --rm -p 8888:8888 -v  $(pwd):/home/esipap/local --name ESIPAP marcodelmastro/esipap:latest`
-	 
-	 In all these cases, when you open the notebook server windowd you should see something like:
-	 
-	 
-
+   * Note that if you use the procedure described above, **every change you make to the notebook will be lost when you stop the container!**. 
+     This is because docker will serve you the notebook from the container, and you don't have the right to save them. 
+	 In other to keep your changes run instead this command:  
+    `docker run --rm -p 8888:8888 -v <location-of-the-ESIPAP-repo>:/home/esipap/local --name ESIPAP marcodelmastro/esipap:latest`  
+	 where `<location-of-the-ESIPAP-repo>` is the path to where you downloaded the ESIPAP repository. For instance, on a Unix machin is could be:  
+	 `docker run --rm -p 8888:8888 -v /Users/Marco/ESIPAP-2021:/home/esipap/local --name ESIPAP marcodelmastro/esipap:latest`  
+	 or, on a Windows machine, something like:  
+	 `docker run --rm -p 8888:8888 -v  C:\Users\Marco\ESIPAP-2021:/home/esipap/local --name ESIPAP marcodelmastro/esipap:latest`  
+	 On a Unix machine you could also `cd` to the repository and use the `pwd` command like:  
+	 `docker run --rm -p 8888:8888 -v  $(pwd):/home/esipap/local --name ESIPAP marcodelmastro/esipap:latest`  
+	 In all these cases, when you open the notebook server windowd you should see something like:  
+	 ![ROOT Notebook browser](browser_local.png)
+ 
 
 - If none of the above works for you, you can launch a standalone [MyBinder](https://mybinder.org) environment using the other button below: it will give you a working setup with Python and ROOT, that will allow you to run the notebooks from the browser. Please note that in this case any change you make will be lost unless you copy them elsewhere.
 
