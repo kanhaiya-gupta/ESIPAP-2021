@@ -21,8 +21,7 @@ RUN python3 -m pip install \
      && rm -rf /var/lib/apt/lists/*
 
 # Create a user that does not have root privileges 
-ARG username=physicist
-#RUN userdel builder
+ARG username=esipap
 RUN useradd --create-home --home-dir /home/${username} ${username}
 ENV HOME /home/${username}
 
