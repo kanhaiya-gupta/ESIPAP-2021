@@ -32,7 +32,7 @@ You have several options to run these notebooks:
    * From the command line, run the command:  
      `docker run --rm -p 8888:8888 --name ESIPAP marcodelmastro/esipap:latest`  
      This will start the ESIPAP container.
-	 You should see on the screen a series of messages, including one with a `http` address similar to this (**the token string will be different!**):__
+	 You should see on the screen a series of messages, including one with a `http` address similar to this (**the token string will be different!**):  
      `http://127.0.0.1:8888/?token=5666c2fc6015b0e0310382076f31ad9df7f2afc2694090ff`
 
    * Copy and paste the address in your browser, and you should land on a page like this one:  
