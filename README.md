@@ -41,7 +41,9 @@ You have several options to run these notebooks:
    * Note that if you use the procedure described above, **every change you make to the notebook will be lost when you stop the container!**. 
      This is because docker will serve you the notebook from the container, and you don't have the right to save them. 
 	 In other to keep your changes run instead this command:  
-    `docker run --rm -p 8888:8888 -v <location-of-the-ESIPAP-repo>:/home/esipap/local --name ESIPAP marcodelmastro/esipap:latest`  
+	 \
+     `docker run --rm -p 8888:8888 -v <location-of-the-ESIPAP-repo>:/home/esipap/local --name ESIPAP marcodelmastro/esipap:latest`  
+	 \
 	 where `<location-of-the-ESIPAP-repo>` is the path to where you downloaded the ESIPAP repository. For instance, on a Unix machin is could be:  
 	 `docker run --rm -p 8888:8888 -v /Users/Marco/ESIPAP-2021:/home/esipap/local --name ESIPAP marcodelmastro/esipap:latest`  
 	 or, on a Windows machine, something like:  
