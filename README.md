@@ -50,7 +50,7 @@ You have several options to run these notebooks:
 	 `docker run --rm -p 8888:8888 -v  $(pwd):/home/esipap/local --name ESIPAP marcodelmastro/esipap:latest`  
 	 In all these cases, when you open the notebook server windowd you should see something like:  
 	 ![ROOT Notebook browser](browser_local.png)
- 
+	 **Note the `local` directory:** if you open it, you'll browse the repository on your disk (and not that in the container), and all changes you make to the notebooks, or any new notebook you create, will be saved on your disk.
 
 - If none of the above works for you, you can launch a standalone [MyBinder](https://mybinder.org) environment using the other button below: it will give you a working setup with Python and ROOT, that will allow you to run the notebooks from the browser. Please note that in this case any change you make will be lost unless you copy them elsewhere.
 
