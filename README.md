@@ -70,5 +70,3 @@ You have several options to run these notebooks:
 **Go to the [Tutorials](Tutorials) directory and execute the [example notebook](Tutorials/TestSetup.ipynb) there to verify your setup!**
 
 If you never used Python before, fear not! It's rather easy to get the grip of the basics. You can use the excellent [Crash Course](https://github.com/rpmuller/PythonCrashCourse) by [Rick Muller](http://www.cs.sandia.gov/~rmuller/) to get started.
-
-
